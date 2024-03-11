@@ -1,9 +1,9 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 
 import MovieCard from './MovieCard';
 
 import './App.css';
-import SearchIcon from './search.svg';
+
 
 const API_URL = 'http://www.omdbapi.com?apikey=a5f925b';
 
@@ -40,11 +40,10 @@ const App = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <img
-                    src={SearchIcon}
-                    alt="search"
-                    onClick={() => searchMovies(searchTerm)}
-                />
+                <img src="https://raw.githubusercontent.com/gist/adrianhajdin/997a8cdf94234e889fa47be89a4759f1/raw/f13e5a9a0d1e299696aa4a0fe3a0026fa2a387f7/search.svg"
+      alt="search"
+      onClick={() => searchMovies(searchTerm)}
+    />
         </div>
 
         {
